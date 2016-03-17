@@ -1,6 +1,17 @@
-{{#each model as |item|}}
-	{{item.content}}
+{{#each model.artists as |artist|}}
+	<dl>
+		<dt>{{artist.name}}</dt>
+		{{#each artist.appearances as |item|}}
+			<dd>
+				{{item.year}} -
+				{{item.day}}
+				({{item.stage}})
+				{{#if item.notes}}
+					*{{item.notes}}
+				{{/if}}
+			</dd>
+		{{/each}}
+	</dl>
 {{/each}}
-{{log model}}
 
 {{outlet}}

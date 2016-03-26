@@ -1,8 +1,25 @@
 {{#power-select
-      selected=destination
-      options=cities
-      onchange=(action "chooseDestination")
-      as |name|
+      selected=selectedArtist
+      options=artists
+      onchange=(action "chooseArtist")
+      placeholder="Search for your favorite artist"
+      as |artist|
     }}
-    {{name}}
+    {{artist.name}}
 {{/power-select}}
+
+{{#with selectedArtist as |artist|}}
+    <h2>{{artist.name}}</h2>
+    <ul>
+        {{#each artist.appearances as |item|}}
+            <li>
+                {{item.year}} -
+                {{item.day}}
+                ({{item.stage}})
+                {{#if item.notes}}
+                    *{{item.notes}}
+                {{/if}}
+            </li>
+        {{/each}}
+    </ul>
+{{/with}}

@@ -1,3 +1,20 @@
 * {
     box-sizing: border-box;
 }
+
+main {
+    padding: 0 10%;
+}
+
+dl {
+    margin: 0 1em;
+}
+
+dd {
+    margin: 0;
+}
+
+.resultCont {
+    margin: 0 -1em;
+    display: flex;
+}

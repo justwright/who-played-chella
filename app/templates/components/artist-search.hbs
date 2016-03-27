@@ -12,16 +12,17 @@
 
 {{#with selectedArtist as |artist|}}
     <h2>{{artist.name}}</h2>
-    <ul>
-        {{#each artist.appearances as |appearance|}}
-            <li>
-                {{appearance.year}} -
-                {{appearance.day}}
-                ({{appearance.stage}})
-                {{#if appearance.notes}}
-                    *{{appearance.notes}}
-                {{/if}}
-            </li>
-        {{/each}}
-    </ul>
+    {{#each artist.appearances as |appearance|}}
+        <dl>
+            <dt>{{appearance.year}}</dt>
+            <dd>{{appearance.day}}</dd>
+            <dd>{{appearance.stage}}</dd>
+            {{#if appearance.notes}}
+                <dd>
+                    <h3>Notes:</h3>
+                    <p>{{appearance.notes}}</p>
+                </dd>
+            {{/if}}
+        </dl>
+    {{/each}}
 {{/with}}

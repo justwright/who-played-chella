@@ -13,13 +13,13 @@
 {{#with selectedArtist as |artist|}}
     <h2>{{artist.name}}</h2>
     <ul>
-        {{#each artist.appearances as |item|}}
+        {{#each artist.appearances as |appearance|}}
             <li>
-                {{item.year}} -
-                {{item.day}}
-                ({{item.stage}})
-                {{#if item.notes}}
-                    *{{item.notes}}
+                {{appearance.year}} -
+                {{appearance.day}}
+                ({{appearance.stage}})
+                {{#if appearance.notes}}
+                    *{{appearance.notes}}
                 {{/if}}
             </li>
         {{/each}}

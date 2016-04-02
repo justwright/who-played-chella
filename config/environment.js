@@ -4,6 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'who-played-chella',
     environment: environment,
+    firebase: 'https://glowing-inferno-4986.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {

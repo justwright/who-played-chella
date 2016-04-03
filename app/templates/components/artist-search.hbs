@@ -10,23 +10,21 @@
     }}
     {{artist.name}}
 {{/power-select}}
-{{log artists}}
+
 {{#with selectedArtist as |artist|}}
     <h2>{{artist.name}}</h2>
     <div class="resultCont">
-        {{log artist.appearances}}
         {{#each artist.appearances as |appearance|}}
             <dl>
                 <dt>{{appearance.year}}</dt>
                 <dd>{{appearance.day}}</dd>
                 <dd>{{appearance.stage}}</dd>
-                <dd>{{appearance.note}}</dd>
-                {{!-- {{#if appearance.notes}}
+                {{#if appearance.notes}}
                     <dd>
                         <h3>Notes:</h3>
                         <p>{{appearance.notes}}</p>
                     </dd>
-                {{/if}} --}}
+                {{/if}}
             </dl>
         {{/each}}
     </div>

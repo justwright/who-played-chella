@@ -15,7 +15,7 @@
     <h2>{{artist.name}}</h2>
     <div class="resultCont">
         {{#each artist.appearances as |appearance|}}
-            <dl>
+            <dl class="year{{appearance.year}}">
                 <dt>{{appearance.year}}</dt>
                 <dd>{{appearance.day}}</dd>
                 <dd>{{appearance.stage}}</dd>

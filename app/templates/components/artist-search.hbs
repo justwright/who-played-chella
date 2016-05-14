@@ -1,11 +1,11 @@
 {{#power-select
       selected=selectedArtist
       options=artists
-      onchange=(action "chooseArtist")
-      placeholder="Search for your favorite artist"
-      searchField="name"
-      verticalPosition="below"
-      searchPlaceholder="Type artist name here"
+      onchange=(action 'chooseArtist')
+      placeholder='Search for your favorite artist'
+      searchField='name'
+      verticalPosition='below'
+      searchPlaceholder='Type artist name here'
       as |artist|
     }}
     {{artist.name}}
@@ -13,9 +13,9 @@
 
 {{#with selectedArtist as |artist|}}
     <h2>{{artist.name}}</h2>
-    <div class="resultCont">
+    <div class='resultCont'>
         {{#each artist.appearances as |appearance|}}
-            <dl class="year{{appearance.year}}">
+            <dl class='year{{appearance.year}}'>
                 <dt>{{appearance.year}}</dt>
                 <dd>{{appearance.day}}</dd>
                 <dd>{{appearance.stage}}</dd>
